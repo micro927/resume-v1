@@ -1,0 +1,152 @@
+{
+    "personalInformation": {
+        "name": "Sitthiphon",
+        "surname": "Skulphan",
+        "nameTH": "สิทธิพล",
+        "surnameTH": "สกุลพรรณ์",
+        "nickname": "Micro",
+        "born": "1992-05-08",
+        "hometown": "Chiang Mai, Thailand",
+        "phone": "084-172-2554",
+        "email": "sitthiphon.s@outlook.com",
+        "linkedin": "linkedin.com/in/sitthiphon-skulphan",
+        "github": "github.com/micro927"
+    },
+    "aboutMe": "Software Developer with 3+ years of experience in educational institution. Responsible to full lifecycle web application development. Focusing on user experience on client-side and performance on server-side. Fully believe that technology will make the people's life better and easier. Still passionate in learning new useful skills, frameworks and tools for improve development efficiency and productivity.",
+    "education": [
+        {
+            "level": "3",
+            "levelTitle": "Master Degree",
+            "levelTitleTH": "ปริญญาโท",
+            "majorTitle": "Computer Science",
+            "majorTitleTH": "วิทยาการคอมพิวเตอร์",
+            "institute": "Faculty of Science, Chiang Mai University",
+            "degree": "M.Sc.",
+            "yearGrad": "2022",
+            "researchTitle": "Population Trajectory Pattern Analysis in Chiang Mai University Based on Jumbo Net Wireless Network",
+            "researchFields": [
+                "Data Clustering",
+                "DBSCAN"
+            ],
+            "researchTools": [
+                "Python",
+                "Pandas",
+                "Jupyter Notebook"
+            ],
+            "researchUrls": [
+                "cmu.to/thesis164251"
+            ]
+        },
+        {
+            "level": "1",
+            "levelTitleTH": "ปริญญาตรี",
+            "levelTitle": "Bachelor Degree",
+            "majorTitle": "Modern Management and Information Technology",
+            "majorTitleTH": "การจัดการสมัยใหม่และเทคโนโลยีสารสนเทศ",
+            "institute": "College of Arts Media and Technology, Chiang Mai University",
+            "degree": "B.A.",
+            "yearGrad": "2014",
+            "research": ""
+        }
+    ],
+    "work": [
+        {
+            "jobno": "1",
+            "jobTitle": "Officer (Non Programming Job)",
+            "Organization": "Registration office, Chiang Mai University",
+            "monthYearStart": "03-2015",
+            "monthYeard": "08-2019",
+            "descriptionList": []
+        },
+        {
+            "jobno": "2",
+            "jobTitle": "Full Stack Web Developer",
+            "Organization": "Registration office, Chiang Mai University",
+            "monthYearStart": "09-2019",
+            "monthYeard": "00-0000",
+            "descriptionList": [
+                "Develop and design 5+ Web Applications that perform CRUD operations, File reading, PDF generating and information dashboard using PHP, jQuery, connected with MySQL database",
+                "Develop REST API for internal use and provides data to an affiliated organization using PHP, Node.js/Express.js, connected with MySQL database",
+                "Develop and design a Static website that serves student's statistic information using Vue.js",
+                "Develop and design Client-Side Web Application using React.js"
+            ]
+        }
+    ],
+    "skill": [
+        {
+            "skillTitle": "PHP",
+            "type": "language",
+            "level": "7"
+        },
+        {
+            "skillTitle": "JavaScript",
+            "type": "language",
+            "level": "5"
+        },
+        {
+            "skillTitle": "HTML",
+            "type": "language",
+            "level": "7"
+        },
+        {
+            "skillTitle": "CSS",
+            "type": "language",
+            "level": "6"
+        },
+        {
+            "skillTitle": "Python",
+            "type": "language",
+            "level": "6"
+        },
+        {
+            "skillTitle": "Node.js",
+            "type": "backend",
+            "level": "7"
+        },
+        {
+            "skillTitle": "Express.js",
+            "type": "backend",
+            "level": "7"
+        },
+        {
+            "skillTitle": "React.js",
+            "type": "frontend",
+            "level": "6"
+        },
+        {
+            "skillTitle": "Vue.js",
+            "type": "frontend",
+            "level": "4"
+        },
+        {
+            "skillTitle": "Bootstrap CSS",
+            "type": "frontend",
+            "level": "8"
+        },
+        {
+            "skillTitle": "jQuery",
+            "type": "frontend",
+            "level": "7"
+        },
+        {
+            "skillTitle": "MySQL",
+            "type": "database",
+            "level": "7"
+        },
+        {
+            "skillTitle": "Docker (Beginner)",
+            "type": "other",
+            "level": "2"
+        }
+    ],
+    "language": [
+        {
+            "languageTitle": "Thai",
+            "level": "Native"
+        },
+        {
+            "languageTitle": "English",
+            "level": "Intermediate"
+        }
+    ]
+}

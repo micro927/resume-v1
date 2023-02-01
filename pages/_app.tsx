@@ -1,16 +1,27 @@
+import Head from 'next/head'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Open_Sans } from '@next/font/google'
+import { Work_Sans } from '@next/font/google'
 
-const inter = Open_Sans({
+const appFont = Work_Sans({
+  weight: "400",
   subsets: ['latin'],
 })
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <main className={inter.className} >
+    <>
+      <Head>
+        <title>Sitthiphon Skulphan | Software Developer</title>
+        <link rel="shortcut icon" href="/dev_24012.ico" />
+      </Head>
+      <style jsx global>{`
+        html {
+          font-family: ${appFont.style.fontFamily};
+        }
+        `}</style>
       <Component {...pageProps} />
-    </main>
+    </>
   )
 }
 
