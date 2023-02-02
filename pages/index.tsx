@@ -1,7 +1,8 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
-import Welcome from '../components/Welcome'
+import WelcomeSection from '../components/WelcomeSection'
+import WorkSection from '../components/WorkSection'
 
 const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { personalInformation, aboutMe } = resumeData
@@ -9,7 +10,8 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
     <div>
       <Navbar />
       <main className="flex w-full md:container md:mx-auto px-5 md:px-0">
-        <Welcome aboutMe={aboutMe} personalInformation={personalInformation} />
+        <WelcomeSection aboutMe={aboutMe} personalInformation={personalInformation} />
+        <WorkSection />
       </main>
       <Footer />
     </div>

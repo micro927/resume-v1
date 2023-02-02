@@ -1,9 +1,9 @@
 import Head from 'next/head'
 import '../styles/globals.css'
 import type { AppProps } from 'next/app'
-import { Work_Sans } from '@next/font/google'
+import { Montserrat } from '@next/font/google'
 
-const appFont = Work_Sans({
+const appFont = Montserrat({
   weight: "400",
   subsets: ['latin'],
 })

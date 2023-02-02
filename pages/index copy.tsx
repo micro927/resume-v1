@@ -1,12 +1,12 @@
 import type { NextPage } from 'next'
 import Image from 'next/image'
-import Welcome from '../components/Welcome'
+import Welcome from '../components/WelcomeSection'
 
 const Home: NextPage = () => {
   return (
     <div>
       <main className="flex w-full flex-1 flex-col items-center justify-center py-2 text-center">
-        <Welcome />
+        <WelcomeSection />
         <div className="mt-6 flex max-w-4xl flex-wrap items-center justify-around sm:w-full">
           <a
             href="https://nextjs.org/docs"

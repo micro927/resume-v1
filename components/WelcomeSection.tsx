@@ -2,6 +2,10 @@ import { log } from 'console'
 import Image from 'next/image'
 import Link from 'next/link'
 import profilePic from '../public/for-web-001.png'
+import { BsGithub, BsLinkedin } from 'react-icons/bs'
+import { GrLinkedinOption } from 'react-icons/gr'
+import { MdOutlineEmail } from 'react-icons/md'
+import { FaGithub, FaFacebookF, FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 
 interface WelcomeProps {
     aboutMe: string
@@ -19,7 +23,7 @@ interface WelcomeProps {
         github: string
     }
 }
-function Welcome({ aboutMe, personalInformation }: WelcomeProps) {
+function WelcomeSection({ aboutMe, personalInformation }: WelcomeProps) {
     const { name, surname, nickname, born, hometown } = personalInformation
     const bornDate = new Date(born)
     const bornDateString = bornDate.toLocaleDateString("en", {
@@ -39,10 +43,10 @@ function Welcome({ aboutMe, personalInformation }: WelcomeProps) {
                         Software Developer | Web Developer
                     </h5>
                     <div className='flex space-x-6 mt-3'>
-                        <div className='border rounded-xl p-1'><Link href={"/github"}>Git</Link></div>
-                        <div className='border rounded-xl p-1'>Git</div>
-                        <div className='border rounded-xl p-1'>Git</div>
-                        <div className='border rounded-xl p-1'>Git</div>
+                        <div className='border rounded-lg p-1 bg-white text-2xl text-slate-900'><Link href={"/github"}><FaGithub /></Link> </div>
+                        <div className='border rounded-lg p-1 bg-white text-2xl text-slate-900'><Link href={"/github"}><FaLinkedinIn /></Link> </div>
+                        <div className='border rounded-lg p-1 bg-white text-2xl text-slate-900'><Link href={"/github"}><FaEnvelope /></Link> </div>
+                        <div className='border rounded-lg p-1 bg-white text-2xl text-slate-900'><Link href={"/github"}><FaFacebookF /></Link> </div>
                     </div>
                 </div>
                 <div className='flex justify-center md:w-2/5 p-0 md:p-0'>
@@ -55,24 +59,24 @@ function Welcome({ aboutMe, personalInformation }: WelcomeProps) {
                     />
                 </div>
             </div>
-            <div className='p-16 rounded-2xl bg-slate-500 bg-opacity-10'>
+            <div className='p-8 lg:p-16 rounded-2xl bg-slate-500 bg-opacity-10'>
                 <h6 className='text-center text-3xl font-bold'>About Me</h6>
-                <div className="flex flex-col md:flex-row w-100 h-full md:justify-between items-start text-lg mt-10">
-                    <div className='flex flex-col text-sm md:text-base justify-center lg:w-2/5 px-4 md:px-9 order-last md:order-first mt-5 md:mt-0'>
+                <div className="flex flex-col lg:flex-row w-100 h-full md:justify-between items-start text-lg mt-10">
+                    <div className='flex flex-col text-sm md:text-base justify-center w-full lg:w-1/2 xl:w-2/5 px-4 md:px-9 order-last md:order-first mt-5 md:mt-0'>
                         <p className='indent-12 text-justify capitalize italic md:not-italic'>
                             “ {aboutMe} ”
                         </p>
                     </div>
-                    <div className='flex flex-col justify-center w-full lg:w-2/5 px-4'>
-                        <div className='flex w-full justify-between px-0 md:px-24 mb-3'>
+                    <div className='flex flex-col justify-center w-full lg:w-1/2 xl:w-2/5 px-4'>
+                        <div className='flex w-full justify-between px-0 md:px-2 mb-3'>
                             <p className='text-right md:text-left font-bold'>Name</p>
                             <p>{name} {surname} ({nickname})</p>
                         </div>
-                        <div className='flex w-full justify-between px-0 md:px-24 mb-3'>
+                        <div className='flex w-full justify-between px-0 md:px-2 mb-3'>
                             <p className='text-right md:text-left font-bold'>Born</p>
                             <p>{bornDateString} ({myAge} Yrs.)</p>
                         </div>
-                        <div className='flex w-full justify-between px-0 md:px-24 mb-3'>
+                        <div className='flex w-full justify-between px-0 md:px-2 mb-3'>
                             <p className='text-right md:text-left font-bold'>Hometown</p>
                             <p>{hometown}</p>
                         </div>
@@ -84,4 +88,4 @@ function Welcome({ aboutMe, personalInformation }: WelcomeProps) {
     );
 }
 
-export default Welcome;
+export default WelcomeSection;
