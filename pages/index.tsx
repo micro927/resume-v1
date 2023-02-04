@@ -9,7 +9,7 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
   return (
     <div>
       <Navbar />
-      <main className="flex w-full md:container md:mx-auto px-5 md:px-0">
+      <main className="w-full min-h-screen container mx-auto px-3">
         <WelcomeSection aboutMe={aboutMe} personalInformation={personalInformation} />
         <WorkSection />
       </main>
@@ -30,6 +30,7 @@ interface PersonalInformation {
   email: string
   linkedin: string
   github: string
+  facebook: string
 }
 
 type Education = []

@@ -9,8 +9,9 @@
         "hometown": "Chiang Mai, Thailand",
         "phone": "084-172-2554",
         "email": "sitthiphon.s@outlook.com",
-        "linkedin": "linkedin.com/in/sitthiphon-skulphan",
-        "github": "github.com/micro927"
+        "linkedin": "https://linkedin.com/in/sitthiphon-skulphan",
+        "github": "https://github.com/micro927",
+        "facebook": "https://facebook.com/nsBelieve"
     },
     "aboutMe": "Software Developer with 3+ years of experience in educational institution. Responsible to full lifecycle web application development. Focusing on user experience on client-side and performance on server-side. Fully believe that technology will make the people's life better and easier. Still passionate in learning new useful skills, frameworks and tools for improve development efficiency and productivity.",
     "education": [
