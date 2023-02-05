@@ -5,13 +5,13 @@ import WelcomeSection from '../components/WelcomeSection'
 import WorkSection from '../components/WorkSection'
 
 const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { personalInformation, aboutMe } = resumeData
+  const { personalInformation, aboutMe, work } = resumeData
   return (
     <div>
       <Navbar />
       <main className="w-full min-h-screen container mx-auto px-3">
         <WelcomeSection aboutMe={aboutMe} personalInformation={personalInformation} />
-        <WorkSection />
+        <WorkSection work={work} />
       </main>
       <Footer />
     </div>
@@ -19,27 +19,51 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
 }
 
 interface PersonalInformation {
-  name: string
-  surname: string
-  nameTH: string
-  surnameTH: string
-  nickname: string
-  born: string
-  hometown: string
-  phone: string
-  email: string
-  linkedin: string
-  github: string
-  facebook: string
+  name: String
+  surname: String
+  nameTH: String
+  surnameTH: String
+  nickname: String
+  born: String
+  hometown: String
+  phone: String
+  email: String
+  linkedin: String
+  github: String
+  facebook: String
 }
 
-type Education = []
+interface EducationItem {
+  level: number,
+  levelTitle: String
+  levelTitleTH: String,
+  majorTitle: String,
+  majorTitleTH: String,
+  institute: String,
+  degree: String,
+  yearGrad: String,
+  researchTitle?: String,
+  researchFields?: Array<any>
+  researchTools?: Array<any>,
+  researchUrls?: String
+}
+type Education = Array<EducationItem>
+
+interface WorkItems {
+  jobno: Number
+  jobTitle: String
+  Organization: String
+  monthYearStart: String
+  monthYeard: String
+  descriptionList: Array<any>
+}
+type Work = Array<WorkItems>
 
 interface ResumeData {
   personalInformation: PersonalInformation
-  aboutMe: string
+  aboutMe: String
   education: Education
-  work: any
+  work: Work
   skills: any
   language: any
 }
