@@ -39,9 +39,9 @@ interface ResumeData {
   personalInformation: PersonalInformation
   aboutMe: string
   education: Education
-  work: object
-  skill: object
-  language: object
+  work: any
+  skills: any
+  language: any
 }
 
 export const getStaticProps: GetStaticProps = async () => {
