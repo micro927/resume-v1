@@ -1,9 +1,9 @@
 interface WorkItem {
-    jobno: Number
-    jobTitle: String
-    Organization: String
-    monthYearStart: String
-    monthYeard: String
+    jobno: string
+    jobTitle: string
+    organization: string
+    dateStart: string
+    dateEnd: string
     descriptionList: Array<any>
 }
 
@@ -19,9 +19,30 @@ function WorkSection({ work }: WorkProps) {
                 {
 
                     work.map(workItems => {
+                        const jobNo = "job" + workItems.jobno
+                        const dateStart = (new Date(workItems.dateStart)).toLocaleDateString("en", {
+                            month: "long",
+                            year: "numeric",
+                        })
+                        const dateEnd = workItems.dateEnd == '' ? "Present" : (new Date(workItems.dateEnd)).toLocaleDateString("en", {
+                            month: "long",
+                            year: "numeric",
+                        })
+
                         return (
-                            <div>
-                                {workItems.jobTitle}
+                            <div id={jobNo}>
+                                <h3 className="text-lg">
+                                    {workItems.jobTitle} | {workItems.organization}
+                                </h3>
+                                <h6>{dateStart} - {dateEnd}</h6>
+                                <ul>
+                                    {workItems.descriptionList.map((description, key) => {
+                                        return (
+                                            <li id={"list" + key}>{description}</li>
+                                        )
+                                    })
+                                    }
+                                </ul>
                             </div>
                         )
                     })

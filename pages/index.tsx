@@ -50,18 +50,18 @@ interface EducationItem {
 type Education = Array<EducationItem>
 
 interface WorkItems {
-  jobno: Number
-  jobTitle: String
-  Organization: String
-  monthYearStart: String
-  monthYeard: String
+  jobno: number
+  jobTitle: string
+  organization: string
+  dateStart: string
+  dateEnd: string
   descriptionList: Array<any>
 }
 type Work = Array<WorkItems>
 
 interface ResumeData {
   personalInformation: PersonalInformation
-  aboutMe: String
+  aboutMe: string
   education: Education
   work: Work
   skills: any
