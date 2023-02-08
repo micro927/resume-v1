@@ -17,15 +17,13 @@ interface EducationProps { education: Array<EducationItem> }
 
 function EducationSection({ education }: EducationProps) {
     return (
-        <section id='work' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
+        <section id='education' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
             <div>
-                <h6 className='text-center text-3xl font-bold'>Education Experience</h6>
+                <h6 className='text-center text-3xl font-bold'>Education</h6>
                 {
                     education.map(educationItem => {
                         return (
-                            <div>
-                                {educationItem.degree}
-                            </div>
+                            <div>{educationItem.degree}</div>
                         )
                     })
                 }

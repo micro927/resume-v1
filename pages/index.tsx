@@ -1,12 +1,14 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
+import ContactSection from '../components/ContactSection'
 import EducationSection from '../components/EducationSection'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
+import SkillsSection from '../components/SkillsSection'
 import WelcomeSection from '../components/WelcomeSection'
 import WorkSection from '../components/WorkSection'
 
 const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { personalInformation, aboutMe, work } = resumeData
+  const { personalInformation, aboutMe, work, techSkills, languageSkills } = resumeData
   return (
     <div>
       <Navbar />
@@ -14,6 +16,8 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
         <WelcomeSection aboutMe={aboutMe} personalInformation={personalInformation} />
         <WorkSection work={work} />
         <EducationSection education={work} />
+        <SkillsSection techSkills={techSkills} languageSkills={languageSkills} />
+        <ContactSection personalInformation={personalInformation} />
       </main>
       <Footer />
     </div>
@@ -61,7 +65,7 @@ interface WorkItem {
 }
 type Work = Array<WorkItem>
 
-enum SkillTypeList {
+enum TechSkillTypeList {
   language,
   backend,
   frontend,
@@ -69,15 +73,15 @@ enum SkillTypeList {
   other,
 }
 
-interface SkillItem {
+interface TechSkill {
   skillTitle: string
-  type: SkillTypeList
+  type: TechSkillTypeList
   level: number
 }
 
-type Skills = Array<SkillItem>
+type TechSkills = Array<TechSkill>
 
-enum LanguageLevelList {
+enum LanguageSkillsLevelList {
   beginner,
   intermediate,
   advanced,
@@ -85,20 +89,20 @@ enum LanguageLevelList {
   native
 }
 
-interface LanguageItem {
+interface LanguageSkill {
   languageTitle: string
-  level: LanguageLevelList
+  level: LanguageSkillsLevelList
 }
 
-type Language = Array<LanguageItem>
+type LanguageSkills = Array<LanguageSkill>
 
 interface ResumeData {
   personalInformation: PersonalInformation
   aboutMe: string
   education: Education
   work: Work
-  skills: Skills
-  language: Language
+  techSkills: TechSkills
+  languageSkills: LanguageSkills
 }
 
 export const getStaticProps: GetStaticProps = async () => {

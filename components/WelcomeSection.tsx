@@ -1,7 +1,7 @@
 import { log } from 'console'
 import Image from 'next/image'
 import Link from 'next/link'
-import profilePic from '../public/for-web-001.png'
+import profilePic from '../public/fake.png' // replace 'for-web-001' on 'fake'
 import { FaGithub, FaFacebookF, FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
 
 interface WelcomeProps {
