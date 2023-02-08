@@ -1,5 +1,5 @@
 interface WorkItem {
-    jobno: string
+    jobno: number
     jobTitle: string
     organization: string
     dateStart: string
@@ -19,7 +19,7 @@ function WorkSection({ work }: WorkProps) {
                 {
 
                     work.map(workItem => {
-                        const jobNo = "job" + workItem.jobno
+                        const jobNo = "job" + workItem.jobno.toString()
                         const dateStart = (new Date(workItem.dateStart)).toLocaleDateString("en", {
                             month: "long",
                             year: "numeric",
@@ -30,7 +30,7 @@ function WorkSection({ work }: WorkProps) {
                         })
 
                         return (
-                            <div id={jobNo}>
+                            <div>
                                 <h3 className="text-lg">
                                     {workItem.jobTitle} | {workItem.organization}
                                 </h3>
@@ -38,7 +38,7 @@ function WorkSection({ work }: WorkProps) {
                                 <ul>
                                     {workItem.descriptionList.map((description, key) => {
                                         return (
-                                            <li id={"list" + key}>{description}</li>
+                                            <li id={jobNo + "list" + key}>{description}</li>
                                         )
                                     })
                                     }
