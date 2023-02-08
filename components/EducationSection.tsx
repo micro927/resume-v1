@@ -1,31 +1,30 @@
 interface EducationItem {
-    level: number,
+    level: number
     levelTitle: string
-    levelTitleTH: string,
-    majorTitle: string,
-    majorTitleTH: string,
-    institute: string,
-    degree: string,
-    yearGrad: string,
-    researchTitle?: string,
+    levelTitleTH: string
+    majorTitle: string
+    majorTitleTH: string
+    institute: string
+    degree: string
+    yearGrad: string
+    researchTitle?: string
     researchFields?: Array<any>
-    researchTools?: Array<any>,
+    researchTools?: Array<any>
     researchUrls?: string
 }
 
+interface EducationProps { education: Array<EducationItem> }
 
-interface EducationProps { work: Array<EducationItem> }
-
-function EducationSection({ work }: EducationProps) {
+function EducationSection({ education }: EducationProps) {
     return (
         <section id='work' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
             <div>
                 <h6 className='text-center text-3xl font-bold'>Education Experience</h6>
                 {
-                    work.map(workItems => {
+                    education.map(educationItem => {
                         return (
                             <div>
-                                {workItems.degree}
+                                {educationItem.degree}
                             </div>
                         )
                     })

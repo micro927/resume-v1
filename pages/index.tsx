@@ -1,4 +1,5 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
+import EducationSection from '../components/EducationSection'
 import Footer from '../components/Footer'
 import Navbar from '../components/Navbar'
 import WelcomeSection from '../components/WelcomeSection'
@@ -12,6 +13,7 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
       <main className="w-full min-h-screen container mx-auto px-3">
         <WelcomeSection aboutMe={aboutMe} personalInformation={personalInformation} />
         <WorkSection work={work} />
+        <EducationSection education={work} />
       </main>
       <Footer />
     </div>
@@ -19,37 +21,37 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
 }
 
 interface PersonalInformation {
-  name: String
-  surname: String
-  nameTH: String
-  surnameTH: String
-  nickname: String
-  born: String
-  hometown: String
-  phone: String
-  email: String
-  linkedin: String
-  github: String
-  facebook: String
+  name: string
+  surname: string
+  nameTH: string
+  surnameTH: string
+  nickname: string
+  born: string
+  hometown: string
+  phone: string
+  email: string
+  linkedin: string
+  github: string
+  facebook: string
 }
 
 interface EducationItem {
-  level: number,
-  levelTitle: String
-  levelTitleTH: String,
-  majorTitle: String,
-  majorTitleTH: String,
-  institute: String,
-  degree: String,
-  yearGrad: String,
-  researchTitle?: String,
+  level: number
+  levelTitle: string
+  levelTitleTH: string
+  majorTitle: string
+  majorTitleTH: string
+  institute: string
+  degree: string
+  yearGrad: string
+  researchTitle?: string
   researchFields?: Array<any>
-  researchTools?: Array<any>,
-  researchUrls?: String
+  researchTools?: Array<any>
+  researchUrls?: string
 }
 type Education = Array<EducationItem>
 
-interface WorkItems {
+interface WorkItem {
   jobno: number
   jobTitle: string
   organization: string
@@ -57,15 +59,46 @@ interface WorkItems {
   dateEnd: string
   descriptionList: Array<any>
 }
-type Work = Array<WorkItems>
+type Work = Array<WorkItem>
+
+enum SkillTypeList {
+  language,
+  backend,
+  frontend,
+  database,
+  other,
+}
+
+interface SkillItem {
+  skillTitle: string
+  type: SkillTypeList
+  level: number
+}
+
+type Skills = Array<SkillItem>
+
+enum LanguageLevelList {
+  beginner,
+  intermediate,
+  advanced,
+  expert,
+  native
+}
+
+interface LanguageItem {
+  languageTitle: string
+  level: LanguageLevelList
+}
+
+type Language = Array<LanguageItem>
 
 interface ResumeData {
   personalInformation: PersonalInformation
   aboutMe: string
   education: Education
   work: Work
-  skills: any
-  language: any
+  skills: Skills
+  language: Language
 }
 
 export const getStaticProps: GetStaticProps = async () => {
