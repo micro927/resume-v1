@@ -1,14 +1,16 @@
-async function fetcher(url: string) {
-    const res = await fetch(url)
-    const resumeData = await res.json()
-    return resumeData
+
+async function fetcher(variable: any) {
+    const resumeData = await fetch('/api/data').then(res => res.json())
+    console.log('+++++++++++', resumeData)
+    variable = resumeData
 }
+
+fetcher(a)
 
 export default function Index() {
     async function aaa() {
-        const b = await fetcher('/api/data')
-        console.log(b)
-        return b
+        console.log('okok', a)
+        return a
     }
     aaa()
     return (
