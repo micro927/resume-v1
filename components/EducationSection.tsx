@@ -23,7 +23,7 @@ function EducationSection({ education }: EducationProps) {
                 {
                     education.map(educationItem => {
                         return (
-                            <div>{educationItem.degree}</div>
+                            <div key={educationItem.level}>{educationItem.degree}</div>
                         )
                     })
                 }

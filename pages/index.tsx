@@ -1,4 +1,6 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
+import path from 'path';
+import { promises as fs } from 'fs';
 import ContactSection from '../components/ContactSection'
 import EducationSection from '../components/EducationSection'
 import Footer from '../components/Footer'
@@ -105,11 +107,10 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
   )
 }
 
-
-export const getStaticProps: GetStaticProps = async (d) => {
-  const res = await fetch(`${process.env.VERCEL_URL}/api/data`)
-  const resumeData: ResumeData[] = await res.json()
-
+export const getStaticProps: GetStaticProps = async () => {
+  const jsonDirectory: String = path.join(process.cwd(), 'json');
+  const filePath: Buffer = await fs.readFile(jsonDirectory + '/information.json') ?? {}
+  const resumeData: ResumeData = JSON.parse(filePath.toString())
   return { props: { resumeData } }
 }
 
