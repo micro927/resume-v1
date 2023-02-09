@@ -7,23 +7,6 @@ import SkillsSection from '../components/SkillsSection'
 import WelcomeSection from '../components/WelcomeSection'
 import WorkSection from '../components/WorkSection'
 
-const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getStaticProps>) => {
-  const { personalInformation, aboutMe, work, techSkills, languageSkills } = resumeData
-  return (
-    <div>
-      <Navbar />
-      <main className="w-full min-h-screen container mx-auto px-3">
-        <WelcomeSection aboutMe={aboutMe} personalInformation={personalInformation} />
-        <WorkSection work={work} />
-        <EducationSection education={work} />
-        <SkillsSection techSkills={techSkills} languageSkills={languageSkills} />
-        <ContactSection personalInformation={personalInformation} />
-      </main>
-      <Footer />
-    </div>
-  )
-}
-
 interface PersonalInformation {
   name: string
   surname: string
@@ -105,8 +88,26 @@ interface ResumeData {
   languageSkills: LanguageSkills
 }
 
-export const getStaticProps: GetStaticProps = async () => {
-  const res = await fetch(`${process.env.HOST}/api/data`)
+const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getStaticProps>) => {
+  const { personalInformation, aboutMe, work, techSkills, languageSkills } = resumeData
+  return (
+    <div>
+      <Navbar />
+      <main className="w-full min-h-screen container mx-auto px-3">
+        <WelcomeSection aboutMe={aboutMe} personalInformation={personalInformation} />
+        <WorkSection work={work} />
+        <EducationSection education={work} />
+        <SkillsSection techSkills={techSkills} languageSkills={languageSkills} />
+        <ContactSection personalInformation={personalInformation} />
+      </main>
+      <Footer />
+    </div>
+  )
+}
+
+
+export const getStaticProps: GetStaticProps = async (d) => {
+  const res = await fetch(`${process.env.VERCEL_URL}/api/data`)
   const resumeData: ResumeData[] = await res.json()
 
   return { props: { resumeData } }

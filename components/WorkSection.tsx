@@ -39,8 +39,8 @@ function WorkSection({ work }: WorkProps) {
                         })
 
                         return (
-                            <div className='p-8 lg:p-16 rounded-2xl bg-slate-500 bg-opacity-10 mb-5'>
-                                <div key={jobNo}>
+                            <div key={jobNo} className='p-8 lg:p-16 rounded-2xl bg-slate-500 bg-opacity-10 mb-5'>
+                                <div>
                                     <h3 className="text-2xl">
                                         {workItem.jobTitle} | {workItem.organization}
                                     </h3>
