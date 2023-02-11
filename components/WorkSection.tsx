@@ -1,3 +1,5 @@
+import { FaCode, FaFileAlt } from 'react-icons/fa'
+
 interface WorkItem {
     jobno: number
     jobTitle: string
@@ -6,17 +8,6 @@ interface WorkItem {
     dateEnd: string
     descriptionList: Array<any>
 }
-
-// declare global {
-//     interface String {
-//         replaceJSX(find: string, replace: string): string[];
-//     }
-// }
-// String.prototype.replaceJSX = function (find: string, replace: string): string[] {
-//     return this.split(' ').map((word) => word === find ? replace + ' ' : word + ' ');
-// }
-
-
 interface WorkProps { work: Array<WorkItem> }
 
 function WorkSection({ work }: WorkProps) {
@@ -24,6 +15,14 @@ function WorkSection({ work }: WorkProps) {
     return (
         <section id='work' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
             <h6 className='text-center text-3xl font-bold'>Work Experience</h6>
+            <div className='flex justify-center mt-5'>
+                <span className="flex mx-5 items-center justify-center w-10 h-10 bg-blue-100 rounded-full lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
+                    <FaCode />
+                </span>
+                <span className="flex mx-5 items-center justify-center w-10 h-10 bg-blue-100 rounded-full lg:h-12 lg:w-12 dark:bg-blue-800 shrink-0">
+                    <FaFileAlt />
+                </span>
+            </div>
             <div className="w-100 h-full mt-10">
                 {
 
