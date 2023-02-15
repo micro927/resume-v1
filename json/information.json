@@ -52,6 +52,7 @@
         {
             "jobno": "0",
             "jobTitle": "Full Stack Web Developer",
+            "jobField": "developer",
             "organization": "Registration office, Chiang Mai University",
             "dateStart": "2019-09-09",
             "dateEnd": "",
@@ -65,6 +66,7 @@
         {
             "jobno": "1",
             "jobTitle": "Officer (Non Programming Job)",
+            "jobField": "none",
             "organization": "Registration office, Chiang Mai University",
             "dateStart": "2015-03-01",
             "dateEnd": "2019-08-01",

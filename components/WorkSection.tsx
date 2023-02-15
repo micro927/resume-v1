@@ -1,3 +1,4 @@
+import { useState, useEffect } from 'react'
 import { FaCode, FaFileAlt } from 'react-icons/fa'
 
 interface WorkItem {
@@ -11,7 +12,13 @@ interface WorkItem {
 interface WorkProps { work: Array<WorkItem> }
 
 function WorkSection({ work }: WorkProps) {
-    work.sort()
+    work.sort(function (job0, job1) { return job1.jobno - job0.jobno })
+    const [workCardState, setWorkCardState] = useState(1)
+
+
+    useEffect(() => {
+
+    }, [workCardState]);
     return (
         <section id='work' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
             <h6 className='text-center text-3xl font-bold'>Work Experience</h6>
@@ -24,6 +31,7 @@ function WorkSection({ work }: WorkProps) {
                 </span>
             </div>
             <div className="w-100 h-full mt-10">
+                <div></div>
                 {
 
                     work.map(workItem => {
