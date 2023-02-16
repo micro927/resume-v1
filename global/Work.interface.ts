@@ -9,7 +9,7 @@ export interface WorkItem {
     tagList: string[]
 }
 
-export type Work = Array<WorkItem>
+export type Work = WorkItem[]
 
 export interface WorkSelectorItem {
     jobNo: number
@@ -18,3 +18,5 @@ export interface WorkSelectorItem {
     dateEnd: string
     isSelected: boolean
 }
+
+export type WorkSelector = WorkSelectorItem[]

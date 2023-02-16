@@ -12,7 +12,7 @@ export interface TechSkill {
     level: number
 }
 
-export type TechSkills = Array<TechSkill>
+export type TechSkills = TechSkill[]
 
 enum LanguageSkillsLevelList {
     beginner,
@@ -27,4 +27,4 @@ export interface LanguageSkill {
     level: LanguageSkillsLevelList
 }
 
-export type LanguageSkills = Array<LanguageSkill>
+export type LanguageSkills = LanguageSkill[]

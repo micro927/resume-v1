@@ -1,28 +1,12 @@
-import { log } from 'console'
 import Image from 'next/image'
 import Link from 'next/link'
 import profilePic from '../public/for-web-001.png' // replace 'for-web-001' on 'fake'
 import { FaGithub, FaFacebookF, FaLinkedinIn, FaEnvelope } from 'react-icons/fa'
+import { PersonalInformation } from '../global/Personal.interface'
 
-interface WelcomeProps {
-    aboutMe: string
-    personalInformation: {
-        name: string
-        surname: string
-        nameTH: string
-        surnameTH: string
-        nickname: string
-        born: string
-        hometown: string
-        phone: string
-        email: string
-        linkedin: string
-        github: string
-        facebook: string
-    }
-}
-function WelcomeSection({ aboutMe, personalInformation }: WelcomeProps) {
-    const { name, surname, nickname, born, hometown, github, email, linkedin, facebook } = personalInformation
+interface Props { personalInformation: PersonalInformation }
+function WelcomeSection({ personalInformation }: Props): JSX.Element {
+    const { name, surname, nickname, born, hometown, github, email, linkedin, facebook, aboutMe } = personalInformation
     const bornDate = new Date(born)
     const bornDateString = bornDate.toLocaleDateString("en", {
         year: "numeric",

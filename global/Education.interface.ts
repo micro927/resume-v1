@@ -13,4 +13,4 @@ export interface EducationItem {
     researchUrls?: string
 }
 
-export type Education = Array<EducationItem>
+export type Education = EducationItem[]

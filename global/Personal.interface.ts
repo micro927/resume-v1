@@ -11,4 +11,5 @@ export interface PersonalInformation {
     linkedin: string
     github: string
     facebook: string
+    aboutMe: string
 }

@@ -1,21 +1,7 @@
-interface EducationItem {
-    level: number
-    levelTitle: string
-    levelTitleTH: string
-    majorTitle: string
-    majorTitleTH: string
-    institute: string
-    degree: string
-    yearGrad: string
-    researchTitle?: string
-    researchFields?: Array<any>
-    researchTools?: Array<any>
-    researchUrls?: string
-}
+import { Education, EducationItem } from "../global/Education.interface";
 
-interface EducationProps { education: Array<EducationItem> }
-
-function EducationSection({ education }: EducationProps) {
+interface Props { education: Education }
+function EducationSection({ education }: Props): JSX.Element {
     return (
         <section id='education' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
             <h6 className='text-center text-3xl font-bold'>Education</h6>
