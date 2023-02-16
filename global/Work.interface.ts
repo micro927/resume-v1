@@ -5,8 +5,11 @@ export interface WorkItem {
     organization: string
     dateStart: string
     dateEnd: string
-    descriptionList: Array<any>
+    descriptionList: string[]
+    tagList: string[]
 }
+
+export type Work = Array<WorkItem>
 
 export interface WorkSelectorItem {
     jobNo: number

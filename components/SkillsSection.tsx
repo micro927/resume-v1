@@ -34,27 +34,26 @@ interface SkillsProps {
 function SkillsSection({ techSkills, languageSkills }: SkillsProps) {
     return (
         <section id='work' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
-            <div>
-                <h6 className='text-center text-3xl font-bold'>Skills</h6>
-                {
-                    techSkills.map(skill => {
-                        return (
-                            <div>
-                                {skill.skillTitle}
-                            </div>
-                        )
-                    })
-                }
-                {
-                    languageSkills.map(skill => {
-                        return (
-                            <div>
-                                {skill.languageTitle}
-                            </div>
-                        )
-                    })
-                }
-            </div>
+
+            <h6 className='text-center text-3xl font-bold'>Skills</h6>
+            {
+                techSkills.map(skill => {
+                    return (
+                        <div key={`skill-${skill.skillTitle}`}>
+                            {skill.skillTitle}
+                        </div>
+                    )
+                })
+            }
+            {
+                languageSkills.map(skill => {
+                    return (
+                        <div key={`lang-${skill.languageTitle}`}>
+                            {skill.languageTitle}
+                        </div>
+                    )
+                })
+            }
         </section>
     );
 }

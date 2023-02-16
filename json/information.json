@@ -50,7 +50,17 @@
     ],
     "work": [
         {
-            "jobno": "0",
+            "jobNo": 0,
+            "jobTitle": "Officer (Non Programming Job)",
+            "jobField": "none",
+            "organization": "Registration office, Chiang Mai University",
+            "dateStart": "2015-03-01",
+            "dateEnd": "2019-08-01",
+            "descriptionList": [],
+            "tagList": []
+        },
+        {
+            "jobNo": 1,
             "jobTitle": "Full Stack Web Developer",
             "jobField": "developer",
             "organization": "Registration office, Chiang Mai University",
@@ -61,16 +71,17 @@
                 "Develop REST API for internal use and provides data to an affiliated organization using PHP, Node.js/Express.js, connected with MySQL database",
                 "Develop and design a Static website that serves student's statistic information using Vue.js",
                 "Develop and design Client-Side Web Application using React.js"
+            ],
+            "tagList": [
+                "PHP",
+                "jQuery",
+                "MySQL",
+                "JavaScript",
+                "Node.js",
+                "Express.js",
+                "Vue.js",
+                "React.js"
             ]
-        },
-        {
-            "jobno": "1",
-            "jobTitle": "Officer (Non Programming Job)",
-            "jobField": "none",
-            "organization": "Registration office, Chiang Mai University",
-            "dateStart": "2015-03-01",
-            "dateEnd": "2019-08-01",
-            "descriptionList": []
         }
     ],
     "techSkills": [

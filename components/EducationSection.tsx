@@ -18,16 +18,14 @@ interface EducationProps { education: Array<EducationItem> }
 function EducationSection({ education }: EducationProps) {
     return (
         <section id='education' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
-            <div>
-                <h6 className='text-center text-3xl font-bold'>Education</h6>
-                {
-                    education.map(educationItem => {
-                        return (
-                            <div key={educationItem.level}>{educationItem.degree}</div>
-                        )
-                    })
-                }
-            </div>
+            <h6 className='text-center text-3xl font-bold'>Education</h6>
+            {
+                education.map(educationItem => {
+                    return (
+                        <div key={`level-${educationItem.level}`}>{educationItem.degree}</div>
+                    )
+                })
+            }
         </section>
     );
 }
