@@ -85,66 +85,79 @@
     ],
     "techSkills": [
         {
+            "skillId": "php",
             "skillTitle": "PHP",
             "type": "language",
             "level": 7
         },
         {
+            "skillId": "js",
             "skillTitle": "JavaScript",
             "type": "language",
             "level": 5
         },
         {
+            "skillId": "html",
             "skillTitle": "HTML",
             "type": "language",
             "level": 7
         },
         {
+            "skillId": "css",
             "skillTitle": "CSS",
             "type": "language",
             "level": 6
         },
         {
+            "skillId": "python",
             "skillTitle": "Python",
             "type": "language",
             "level": 6
         },
         {
+            "skillId": "nodejs",
             "skillTitle": "Node.js",
             "type": "backend",
             "level": 7
         },
         {
+            "skillId": "expressjs",
             "skillTitle": "Express.js",
             "type": "backend",
             "level": 7
         },
         {
+            "skillId": "reactjs",
             "skillTitle": "React.js",
             "type": "frontend",
             "level": 6
         },
         {
+            "skillId": "vuejs",
             "skillTitle": "Vue.js",
             "type": "frontend",
             "level": 4
         },
         {
+            "skillId": "bootstrap",
             "skillTitle": "Bootstrap CSS",
             "type": "frontend",
             "level": "8"
         },
         {
+            "skillId": "jquery",
             "skillTitle": "jQuery",
             "type": "frontend",
             "level": "7"
         },
         {
+            "skillId": "mysql",
             "skillTitle": "MySQL",
             "type": "database",
             "level": "7"
         },
         {
+            "skillId": "docker",
             "skillTitle": "Docker (Beginner)",
             "type": "other",
             "level": "2"

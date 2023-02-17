@@ -1,6 +1,7 @@
 export type TechSkillTypeList = "language" | "backend" | "frontend" | "database" | "other"
 
 export interface TechSkill {
+    skillId: string
     skillTitle: string
     type: TechSkillTypeList
     level: number

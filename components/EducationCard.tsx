@@ -1,23 +1,9 @@
 import Link from "next/link";
 import { FaAtlas, FaLaptopCode, FaLink, FaUserGraduate } from "react-icons/fa";
 import { EducationItem } from "../global/Education.interface";
-
 interface Props { educationItem: EducationItem }
 function EducationCard({ educationItem }: Props): JSX.Element {
-    const {
-        level,
-        levelTitle,
-        levelTitleTH,
-        majorTitle,
-        majorTitleTH,
-        institute,
-        degree,
-        yearGrad,
-        researchTitle,
-        researchFields,
-        researchTools,
-        researchUrls,
-    } = educationItem
+    const { level, levelTitle, levelTitleTH, majorTitle, majorTitleTH, institute, degree, yearGrad, researchTitle, researchFields, researchTools, researchUrls } = educationItem
     return (
         <div key={"level-" + level} className='w-100 lg:w-[49%] hover:scale-[102%] duration-300 p-8 lg:p-16 rounded-2xl bg-slate-500 bg-opacity-10 mb-5'>
             <p className="text-xl font-bold mb-1">
