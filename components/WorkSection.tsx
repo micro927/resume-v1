@@ -20,9 +20,9 @@ function WorkSection({ work }: Props): JSX.Element {
 
 
     return (
-        <section id='work' className='flex flex-col w-full scroll-mt-6 scroll-smooth mb-12'>
+        <section id='work' className='flex flex-col w-full scroll-mt-16 mb-12'>
             <h6 className='text-center text-3xl font-bold'>Work Experience</h6>
-            <div className='flex justify-center my-5'>
+            <div className='flex justify-start mb-5'>
                 <WorkSelectorBar work={workList} clickWorkSelector={clickWorkSelector} />
             </div>
             <WorkCard workItem={WorkItem} />

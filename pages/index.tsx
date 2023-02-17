@@ -20,8 +20,8 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
       <main className="w-full min-h-screen container mx-auto px-3">
         <WelcomeSection personalInformation={personalInformation} />
         <WorkSection work={work} />
+        <SkillsSection techSkills={techSkills} />
         <EducationSection education={education} />
-        <SkillsSection techSkills={techSkills} languageSkills={languageSkills} />
         <ContactSection personalInformation={personalInformation} />
       </main>
       <Footer />

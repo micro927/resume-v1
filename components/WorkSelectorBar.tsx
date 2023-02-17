@@ -41,7 +41,7 @@ function WorkSelectorBar({ work, clickWorkSelector }: Props): JSX.Element {
                     const buttonClass = item.isSelected ? 'bg-green-500 scale-110' : 'bg-slate-500 scale-95'
                     const IconComponent = item.jobField === 'none' ? IconList.nonprogramming : IconList.programming
                     return (
-                        <button key={`job-${item.jobNo}`} type='button' onClick={() => { handleClickWorkSelector(item.jobNo) }} className={`flex mx-5 justify-center align-middle rounded-lg p-2 text-2xl text-white hover:scale-125 hover:bg-green-700 duration-300 ease-out ${buttonClass}`}>
+                        <button key={`job-${item.jobNo}`} type='button' onClick={() => { handleClickWorkSelector(item.jobNo) }} className={`flex ml-4 justify-center align-middle rounded-lg p-2 text-2xl text-white hover:scale-125 hover:bg-green-700 duration-300 ease-out ${buttonClass}`}>
                             <IconComponent />{''}
                         </button>
                     )
