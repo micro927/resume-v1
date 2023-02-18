@@ -10,9 +10,7 @@ module.exports = {
       colors: {
         facebook: '#4267B2',
         linkedin: '#0072b1',
-        email: '#EA4335'
-
-
+        outlook: '#0072C6',
       },
     },
   },

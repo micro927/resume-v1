@@ -3,6 +3,9 @@
 @tailwind utilities;
 html {
   scroll-behavior: smooth;
+  /* scroll-snap-type: mandatory; */
+  /* scroll-snap-points-y: repeat(100vh); */
+  /* scroll-snap-type: y mandatory; */
 }
 
 body {
@@ -12,8 +15,16 @@ body {
     rgb(16, 37, 60) 51.2%,
     rgb(0, 0, 0) 98.6%
   );
-  /* background-attachment: fixed; */
+  background-attachment: fixed;
   color: #efefef;
+}
+
+/* section {
+  scroll-snap-align: start;
+} */
+
+.section-header {
+  @apply text-center text-2xl lg:text-3xl font-bold;
 }
 
 /* example for gradient text */
@@ -27,4 +38,15 @@ body {
   background-clip: text;
   color: transparent;
   line-height: 85px;
+}
+
+
+.progress-bar {
+  position: fixed;
+  top: 20;
+  left: 0;
+  right: 0;
+  height: 10px;
+  background: var(--red);
+  transform-origin: 0%;
 }

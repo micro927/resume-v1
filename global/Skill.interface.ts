@@ -1,4 +1,4 @@
-export type TechSkillTypeList = "language" | "backend" | "frontend" | "database" | "other"
+export type TechSkillTypeList = "language" | "frontend" | "backend" | "database" | "other"
 
 export interface TechSkill {
     skillId: string
