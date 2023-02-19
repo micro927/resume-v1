@@ -3,8 +3,8 @@ import Link from "next/link";
 function Navbar() {
 
     return (
-        <nav className="hidden md:flex sticky h-12 top-0  border-t border-slate-900 border-opacity-40 bg-slate-800 bg-opacity-95">
-            <div className="container mx-auto flex justify-start items-center">
+        <nav className="hidden md:flex relative h-12 top-0  border-t border-slate-900 border-opacity-40 bg-slate-800 bg-opacity-0">
+            <div className="container mx-auto px-3 flex justify-start items-center">
                 <div className="space-x-10">
                     <Link className="hidden lg:inline opacity-30 hover:opacity-100 duration-150" scroll={false} href='#welcome'>
                         <span>About Me</span>
