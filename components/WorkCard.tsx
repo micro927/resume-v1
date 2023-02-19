@@ -39,7 +39,7 @@ function WorkCard({ workItem }: Props): JSX.Element {
                 </ul>
             </div>
             <div className='mt-auto ml-4 flex flex-wrap text-xs lg:text-sm text-slate-500 '>
-                    {tagList.map(tag => <span className='mr-2'>#{tag}</span>)}
+                    {tagList.map(tag => <span key={`tag-${tag}`} className='mr-2'>#{tag}</span>)}
                 </div>
 
         </div>
