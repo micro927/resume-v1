@@ -1,7 +1,6 @@
 import type { NextPage, GetStaticProps, InferGetStaticPropsType } from 'next'
 import path from 'path';
 import { promises as fs } from 'fs';
-import { Montserrat } from '@next/font/google'
 // component
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
@@ -13,16 +12,10 @@ import ContactSection from '../components/ContactSection'
 // type & interface
 import { ResumeData } from '../global/ResumeData.interface';
 
-const appFont = Montserrat({
-  weight: "400",
-  subsets: ['latin'],
-})
-
 const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { personalInformation, aboutMe, work, techSkills, languageSkills, education } = resumeData
-
   return (
-    <div className={appFont.className}>
+    <>
       <Navbar />
       <main className="w-full min-h-screen container mx-auto px-3">
         <WelcomeSection personalInformation={personalInformation} />
@@ -32,7 +25,7 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
         <ContactSection personalInformation={personalInformation} />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 
