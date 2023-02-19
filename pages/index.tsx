@@ -15,7 +15,7 @@ import { ResumeData } from '../global/ResumeData.interface';
 const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getStaticProps>) => {
   const { personalInformation, aboutMe, work, techSkills, languageSkills, education } = resumeData
   return (
-    <div>
+    <>
       <Navbar />
       <main className="w-full min-h-screen container mx-auto px-3">
         <WelcomeSection personalInformation={personalInformation} />
@@ -25,7 +25,7 @@ const MainPage: NextPage = ({ resumeData }: InferGetStaticPropsType<typeof getSt
         <ContactSection personalInformation={personalInformation} />
       </main>
       <Footer />
-    </div>
+    </>
   )
 }
 
