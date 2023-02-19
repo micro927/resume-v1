@@ -6,8 +6,8 @@ import WorkSelectorBar from './WorkSelectorBar'
 interface Props { work: Work }
 function WorkSection({ work }: Props): JSX.Element {
     const workList = work.reverse()
-    const [WorkItem, setWorkItemState] = useState<WorkItem>(workList.find((workItem: WorkItem) => workItem.dateEnd === '') ?? workList[0])
-    const [workJobNo, setWorkJobNo] = useState<number>(workList.length - 1)
+    const [workItem, setWorkItemState] = useState<WorkItem>(workList[0])
+    const [workJobNo, setWorkJobNo] = useState<number>(workList[0].jobNo)
 
     function clickWorkSelector(no: number) {
         setWorkJobNo(no)
@@ -25,7 +25,7 @@ function WorkSection({ work }: Props): JSX.Element {
             <div className='flex flex-col my-auto justify-center'>
                 <div>
                     <WorkSelectorBar work={workList} clickWorkSelector={clickWorkSelector} />
-                    <WorkCard workItem={WorkItem} />
+                    <WorkCard workItem={workItem} />
                 </div>
             </div>
         </section>

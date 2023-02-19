@@ -14,14 +14,12 @@ function MyApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Sitthiphon Skulphan | Software Developer</title>
         <link rel="shortcut icon" href="/dev_24012.ico" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {/* <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0,user-scalable=0" /> */}
       </Head>
-      <style jsx global>{`
-        html {
-          font-family: ${appFont.style.fontFamily};
-        }
-        `}</style>
-      <Component {...pageProps} />
+      <div className={appFont.className}>
+        <Component {...pageProps} />
+      </div>
     </>
   )
 }

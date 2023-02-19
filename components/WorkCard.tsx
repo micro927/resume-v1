@@ -22,7 +22,7 @@ function WorkCard({ workItem }: Props): JSX.Element {
     })
 
     return (
-        <div key={"jobNo-" + jobNo} className='flex flex-col w-100 min-h-[70vh] p-8 lg:p-16 rounded-2xl bg-slate-500 bg-opacity-10 mb-5'>
+        <div key={"jobNo-" + jobNo} className='flex flex-col w-100 min-h-[85vh] md:min-h-[70vh] p-8 lg:p-16 rounded-2xl bg-slate-500 bg-opacity-10 mb-5'>
             <p className="text-xl lg:text-2xl font-bold mb-1">
                 {jobTitle}
             </p>

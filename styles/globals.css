@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 html {
   scroll-behavior: smooth;
   /* scroll-snap-type: mandatory; */
@@ -9,27 +10,23 @@ html {
 }
 
 body {
-  overscroll-behavior: none;
+  overscroll-behavior: auto;
   background: linear-gradient(
     67deg,
     rgb(36, 45, 57) 11.2%,
     rgb(16, 37, 60) 51.2%,
     rgb(0, 0, 0) 98.6%
   );
-  background-attachment: fixed;
+  /* background-attachment: fixed; */
   color: #efefef;
 }
-
-/* section {
-  scroll-snap-align: start;
-} */
 
 .section-header {
   @apply text-center text-2xl lg:text-3xl font-bold;
 }
 
 /* example for gradient text */
-.ffss {
+/* .ffss {
   background-image: linear-gradient(
     83.84deg,
     rgb(0, 136, 255) -6.87%,
@@ -39,9 +36,9 @@ body {
   background-clip: text;
   color: transparent;
   line-height: 85px;
-}
+} */
 
-.progress-bar {
+/* .progress-bar {
   position: fixed;
   top: 20;
   left: 0;
@@ -49,4 +46,4 @@ body {
   height: 10px;
   background: var(--red);
   transform-origin: 0%;
-}
+} */
