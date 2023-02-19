@@ -18,7 +18,7 @@ function WelcomeSection({ personalInformation }: Props): JSX.Element {
     const myFullName = (`${name} ${surname}`)
     const myAge = new Date(new Date().getTime() - bornDate.getTime()).getFullYear() - 1970;
     return (
-        <section id='welcome' className='flex flex-col w-full min-h-screen justify-center scroll-mt-8 md:scroll-mt-16 mb-12 lg:mb-0'>
+        <section id='welcome' className='flex flex-col w-full min-h-screen justify-center scroll-mt-8 md:scroll-mt-16 mb-12'>
 
             <div className="flex flex-col md:flex-row min-h-screen md:min-h-0 w-full justify-between items-center">
                 <div className='flex flex-col justify-center h-1/2 md:h-auto md:w-3/5 p-0 md:p-2 text-center md:text-left'>
