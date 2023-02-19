@@ -72,18 +72,17 @@ function WelcomeSection({ personalInformation }: Props): JSX.Element {
                         </div>
                         <div className='flex flex-col justify-center w-full lg:w-1/2 xl:w-5/12 px-4 text-sm sm:text-base mt-10 lg:mt-0  '>
                             <div className='flex w-full justify-between items-center px-0 md:px-2 mb-3'>
-                                <span className='flex items-center text-base lg:text-lg font-bold'><FaUser className='mr-1 text-slate-500' /> <span>Name</span></span>
-                                <span>{name} {surname} ({nickname})</span>
+                                <span className=' hidden sm:flex w-full items-center text-base sm:text-lg font-bold'><FaUser className='mr-1 text-slate-500' /> <span>Name</span></span>
+                                <p className='w-full text-center sm:text-left  font-bold sm:font-normal'>{name} {surname} ({nickname})</p>
                             </div>
                             <div className='flex w-full justify-between items-center px-0 md:px-2 mb-3'>
-                                <span className='flex items-center text-base lg:text-lg font-bold'><FaBirthdayCake className='mr-1 text-slate-500' /> <span>Born</span></span>
-
-                                <p>{bornDateString} ({myAge} Yrs.)</p>
+                                <span className=' hidden sm:flex w-full items-center text-base sm:text-lg font-bold'><FaBirthdayCake className='mr-1 text-slate-500' /> <span>Born</span></span>
+                                <p className='w-full text-center sm:text-left  font-bold sm:font-normal'>{bornDateString} ({myAge} yrs)</p>
                             </div>
                             <div className='flex w-full justify-between items-center px-0 md:px-2 mb-3'>
-                                <span className='flex items-center text-base lg:text-lg font-bold'><FaHome className='mr-1 text-slate-500' /> <span>Hometown</span></span>
+                                <span className=' hidden sm:flex w-full items-center text-base sm:text-lg font-bold'><FaHome className='mr-1 text-slate-500' /> <span>Hometown</span></span>
 
-                                <p>{hometown}</p>
+                                <p className='w-full text-center sm:text-left  font-bold sm:font-normal'>{hometown}</p>
                             </div>
                         </div>
                     </div>
